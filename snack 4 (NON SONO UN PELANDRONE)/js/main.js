@@ -7,13 +7,24 @@ var myArray2 = ["elemento", "elemento", "elemento"];
 console.log("Array iniziale 1: " + myArray1);
 console.log("Array iniziale 2: " + myArray2);
 
-for (i = 0; i < myArray1.length; i++) {
+// Soluzione BRUTTA COME LA FAME
+/*for (i = 0; i < myArray1.length; i++) {
   for (j = 0; j < myArray2.length; j++) {
     if (myArray1.length < myArray2.length) {
       myArray1.push("elemento");
     } else if (myArray2.length < myArray1.length) {
       myArray2.push("elemento");
     }
+  }
+}
+*/
+
+// Soluzione BELLA COME.. LA PIZZA?
+while (myArray1.length != myArray2.length) {
+  if (myArray1.length < myArray2.length) {
+    myArray1.push("elemento");
+  } else if (myArray2.length < myArray1.length) {
+    myArray2.push("elemento");
   }
 }
 
